@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp"
+    android:focusable="false">
+
+    <ImageView
+        android:id="@+id/imgProgImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@color/bg"
+        android:focusable="false"
+        android:minHeight="100dp"
+        android:scaleType="fitCenter"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <ProgressBar
+        android:id="@+id/imgProgProgress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+</FrameLayout>

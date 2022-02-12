@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/mediaBannerStatus"
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        android:background="@color/nav_bg"
+        android:scaleType="centerCrop"
+        tools:ignore="ContentDescription,ImageContrastCheck"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/mediaAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nav_bg">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/mediaCollapsing"
+            android:layout_width="match_parent"
+            android:layout_height="192dp"
+            app:contentScrim="@color/nav_bg"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|snap"
+            app:titleCollapseMode="fade">
+
+            <ImageView
+                android:id="@+id/mediaBanner"
+                android:layout_width="match_parent"
+                android:layout_height="192dp"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                tools:ignore="ContentDescription,ImageContrastCheck"
+                tools:srcCompat="@tools:sample/backgrounds/scenic[0]" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="32dp"
+                android:clickable="false"
+                android:src="@drawable/linear_gradient"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/mediaTitleCollapse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="156dp"
+                android:layout_marginEnd="32dp"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/poppins_bold"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="3"
+                android:scrollHorizontally="false"
+                android:singleLine="false"
+                android:text="@string/slogan"
+                android:textSize="16sp"
+                android:transitionName="mediaTitle" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/mediaTitleContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:minHeight="64dp"
+                android:orientation="horizontal"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                tools:ignore="UselessParent">
+
+
+                <TextView
+                    android:id="@+id/mediaTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="64dp"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center_vertical"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/slogan"
+                    android:textSize="16sp"
+                    android:transitionName="mediaTitle"
+                    tools:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/mediaAccessContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="-8dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="16dp">
+
+                    <Button
+                        android:id="@+id/mediaAddToList"
+                        android:layout_width="108dp"
+                        android:layout_height="56dp"
+                        android:layout_gravity="bottom"
+                        android:ellipsize="marquee"
+                        android:fontFamily="@font/poppins_bold"
+                        android:insetTop="8dp"
+                        android:insetBottom="8dp"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:text="@string/add"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="16dp"
+                        tools:ignore="SmallSp,TextContrastCheck" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/mediaUserStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/poppins_bold"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:singleLine="true"
+                            android:text="@string/status"
+                            android:textColor="?attr/colorSecondary"
+                            tools:ignore="TextContrastCheck" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/mediaUserProgress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_bold"
+                                android:textSize="16sp"
+                                tools:ignore="TextContrastCheck"
+                                tools:text="0" />
+
+                            <TextView
+                                android:id="@+id/mediaTotal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:alpha="0.58"
+                                android:ellipsize="marquee"
+                                android:fontFamily="@font/poppins_bold"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:singleLine="true"
+                                android:textSize="16sp"
+                                tools:text=" | ~" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/mediaFav"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="8dp"
+                        android:padding="8dp"
+                        android:tintMode="src_atop"
+                        app:srcCompat="@drawable/ic_round_favorite_border_24"
+                        app:tint="@color/nav_tab"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <ImageView
+                        android:id="@+id/mediaNotify"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="-16dp"
+                        android:padding="8dp"
+                        app:srcCompat="@drawable/ic_round_share_24"
+                        app:tint="@color/nav_tab"
+                        app:tintMode="src_atop"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/mediaViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="false"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/mediaTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/nav_bg"
+        app:itemActiveIndicatorStyle="@style/BottomNavBar"
+        app:itemIconTint="@color/tab_layout_icon"
+        app:itemRippleColor="?attr/colorSecondary"
+        app:itemTextAppearanceActive="@style/NavBarText"
+        app:itemTextAppearanceInactive="@style/NavBarText"
+        app:itemTextColor="@color/tab_layout_text"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mediaClose"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="end"
+        android:layout_margin="16dp"
+        android:translationZ="2dp"
+        app:cardBackgroundColor="@color/nav_bg"
+        app:cardCornerRadius="16dp">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/mediaCloseImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_round_close_24"
+            tools:ignore="ContentDescription" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mediaCover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:layout_margin="32dp"
+        android:translationZ="4dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="16dp"
+        app:layout_anchor="@id/mediaBanner">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/mediaCoverImage"
+            android:layout_width="108dp"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:transitionName="mediaCover"
+            app:shapeAppearanceOverlay="@style/roundedImageView"
+            tools:ignore="ContentDescription,ImageContrastCheck"
+            tools:srcCompat="@tools:sample/backgrounds/scenic[2]" />
+    </androidx.cardview.widget.CardView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.Saikou" parent="Theme.Base">
+        <item name="android:statusBarColor">@color/status</item>
+        <item name="colorPrimary">@color/pink_200</item>
+        <item name="colorOnPrimary">@color/bg_black</item>
+        <item name="android:textColor">@color/bg_white</item>
+    </style>
+</resources>

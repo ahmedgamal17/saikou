@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mediaCountdownContainer"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginBottom="-16dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="?attr/colorPrimary"
+        app:cardCornerRadius="0dp">
+
+        <TextView
+            android:id="@+id/mediaCountdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="?attr/colorOnPrimary"
+            tools:text="Next Episode will be released in \n00:00:00" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="-24dp"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <Button
+            android:id="@+id/animeSourceYT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/fav"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/play_yt"
+            android:textColor="@color/bg_white"
+            android:visibility="gone"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/ic_round_play_circle_24"
+            app:iconTint="@color/bg_white"
+            tools:ignore="TextContrastCheck"
+            tools:visibility="gone" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="@string/source"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:hintAnimationEnabled="true"
+            app:startIconDrawable="@drawable/ic_round_playlist_play_24">
+
+            <AutoCompleteTextView
+                android:id="@+id/animeSource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_bold"
+                android:freezesText="false"
+                android:inputType="none"
+                android:padding="8dp"
+                android:text="@string/watch"
+                android:textAllCaps="true"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="14sp"
+                tools:ignore="LabelFor,TextContrastCheck,DuplicateSpeakableTextCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/animeSourceTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/poppins_bold"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            tools:text="@string/get_recommendations" />
+
+        <TextView
+            android:id="@+id/animeSourceSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="-12dp"
+            android:layout_marginEnd="-12dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="12dp"
+            android:text="@string/wrong"
+            android:textAlignment="textEnd"
+            android:textColor="?attr/colorSecondary"
+            tools:ignore="TextContrastCheck" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/eps"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/animeSourceList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.33"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_round_view_list_24"
+                app:tint="@color/bg_opp"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/animeSourceGrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.33"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_round_grid_view_24"
+                app:tint="@color/bg_opp"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/animeSourceCompact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.33"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_round_view_comfy_24"
+                app:tint="@color/bg_opp"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <ImageView
+                android:id="@+id/animeSourceTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="1"
+                android:padding="8dp"
+                android:rotation="90"
+                app:srcCompat="@drawable/ic_round_arrow_back_ios_new_24"
+                app:tint="@color/bg_opp"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/animeSourceContinue"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone"
+            app:cardCornerRadius="16dp"
+            app:cornerRadius="12dp"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/itemEpisodeImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription,ImageContrastCheck"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:alpha="0.6"
+                android:background="@color/bg_black" />
+
+            <View
+                android:id="@+id/itemEpisodeFillerView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/filler"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/animeSourceContinueText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="@string/continue_watching"
+                android:textColor="@color/bg_white"
+                app:drawableEndCompat="@drawable/ic_round_play_arrow_24" />
+
+            <LinearLayout
+                android:id="@+id/itemEpisodeProgressCont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/itemEpisodeProgress"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="0"
+                    android:background="@color/pink_500" />
+
+                <View
+                    android:id="@+id/itemEpisodeProgressEmpty"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <ani.saikou.FadingEdgeRecyclerView
+        android:id="@+id/animeSourceChipRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:clipToPadding="false"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:requiresFadingEdge="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_chip"
+        tools:orientation="horizontal" />
+
+    <TextView
+        android:id="@+id/animeSourceNotFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:padding="32dp"
+        android:text="@string/source_not_found"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/animeSourceProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        tools:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "185630514021",
+    "project_id": "saikou-a031d",
+    "storage_bucket": "saikou-a031d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185630514021:android:b565f9c8ff5db6d5f55f8c",
+        "android_client_info": {
+          "package_name": "ani.saikou"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "185630514021-3imscqs59sk53paki4hrt23lbg3d268o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0hJ_rziZtLiEYCsxYUS2pC9qSCYTAeQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "185630514021-3imscqs59sk53paki4hrt23lbg3d268o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
